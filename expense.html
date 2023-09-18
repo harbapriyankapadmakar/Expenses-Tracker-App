@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense</title>
+    <link rel="stylesheet" href="./expense.css">
+</head>
+<body>
+    <h1>Expense tracker </h1>
+    <div class="container" id="containerid">
+           <form action="/expense/add-expense" method="post" onsubmit="addUsers(event)">
+            <div class="category">
+                <label>Choose a category</label><br>
+                <select name="category" id="listid">
+                    <option value="">Choose one</option>
+                    <option value="parlour">parlour</option>
+                       <option value="movie">Movie</option>
+                          <option value="Trip">Trip</option>
+                             <option value="food">Food</option>
+                                <option value="shopping">Shopping</option>
+                </select>
+            </div>
+            <div class="description">
+                <label>Choose a description</label><br>
+                <input type="text" name="description" id="desid">
+            </div>
+            <div class="amount">
+                <label>ExpenseAmount</label><br>
+                <input type="number" name="amount" id="expenseid">
+            </div>
+           
+           
+                 <button type="submit">Addexpense</button>
+           </form>
+
+           <div id="expenses">
+            <ul id="listofexpenses"></ul>
+           </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+ <script src="./expense.js"></script>
+</body>
+</html>
